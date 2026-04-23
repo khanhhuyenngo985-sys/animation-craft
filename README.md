@@ -1,5 +1,7 @@
 # Animation Craft
 
+[English](README.md) | [中文](README.zh-CN.md)
+
 Purposeful UI motion for agents that build, refine, and review animation.
 
 Animation Craft helps an agent decide why something should move, how much motion the interface can afford, which implementation technique fits the job, and how to verify the result without turning the product into a pile of decorative transitions.
@@ -65,6 +67,7 @@ The `references/` folder adds optional depth without bloating the main skill:
 animation-craft/
 |-- SKILL.md
 |-- README.md
+|-- README.zh-CN.md
 |-- agents/
 |   `-- openai.yaml
 `-- references/

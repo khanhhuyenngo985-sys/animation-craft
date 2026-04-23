@@ -1,0 +1,85 @@
+# Animation Craft
+
+[English](README.md) | [中文](README.zh-CN.md)
+
+面向智能体的 UI 动效技能，用来创建、优化和评审有目的的动画。
+
+Animation Craft 帮助智能体先判断“为什么要动”，再决定动效强度、实现技术和验证方式。目标不是堆转场，而是让界面更清楚、更顺滑、更有反馈。
+
+| 方向 | 能帮你做什么 |
+| --- | --- |
+| 动效设计 | 微交互、状态过渡、加载状态、滚动效果、页面入场 |
+| 技术实现 | CSS transitions、Web Animations API、Framer Motion、GSAP、Canvas、WebGL、Three.js |
+| 质量评审 | 卡顿、节奏、可访问性、布局偏移、减少动态效果、视觉层级 |
+| 公开边界 | 提供通用方法和安全默认值，不暴露私有风格配方或专有资产 |
+
+## 安装
+
+使用 Skills CLI：
+
+```bash
+npx skills add khanhhuyenngo985-sys/animation-craft -g
+```
+
+手动安装：
+
+```bash
+mkdir -p ~/.agents/skills
+git clone https://github.com/khanhhuyenngo985-sys/animation-craft ~/.agents/skills/animation-craft
+```
+
+## 使用
+
+当你希望智能体创建、优化或评审动效时，可以这样调用：
+
+```text
+Use $animation-craft to make this dashboard feel more responsive without adding decorative motion.
+```
+
+```text
+Use $animation-craft to review the modal and loading animations for accessibility, timing, and layout issues.
+```
+
+## 这个技能会教什么
+
+核心技能文件提供一套紧凑工作流：
+
+- 先判断动画的任务：反馈、连续性、引导或表达。
+- 重要动效开始前，写一个很短的 motion brief。
+- 根据交互选择节奏、缓动、层次和技术方案。
+- 尊重 `prefers-reduced-motion`。
+- 验证第一帧、运动峰值帧、静止帧、移动端表现，以及 Canvas/WebGL 是否正常渲染。
+- 用严重度、风险、建议和验证步骤来评审动画。
+
+## 知识库
+
+`references/` 文件夹提供按需加载的扩展知识，不会把主技能文件撑得太重：
+
+| 文件 | 什么时候读 |
+| --- | --- |
+| `references/motion-principles.md` | 规划动效语言、层级、staging、节奏和状态叙事 |
+| `references/implementation-notes.md` | 选择 CSS、WAAPI、Framer Motion、GSAP、Canvas、WebGL 或 Three.js |
+| `references/review-rubric.md` | 评审已有动画，并写出可执行的问题、风险和建议 |
+
+## 仓库结构
+
+```text
+animation-craft/
+|-- SKILL.md
+|-- README.md
+|-- README.zh-CN.md
+|-- agents/
+|   `-- openai.yaml
+`-- references/
+    |-- implementation-notes.md
+    |-- motion-principles.md
+    `-- review-rubric.md
+```
+
+## 公开边界
+
+这是一个公开技能。它只包含通用启发、质量清单、安全默认值和评审框架，不包含私有动画配方、标志性序列、内部 prompt、客户案例或可复用内部资产。
+
+## License
+
+这个仓库暂时还没有添加 license。如果要在 GitHub 浏览和内部使用之外进一步分发，建议先补充 license。

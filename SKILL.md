@@ -37,6 +37,14 @@ For substantial animation work, write a tiny working brief before editing:
 
 If a motion idea cannot be tied to intent, cut or simplify it.
 
+## Knowledge Base
+
+Load optional references only when the task needs more depth:
+
+- `references/motion-principles.md`: planning motion language, hierarchy, staging, rhythm, object constancy, and state storytelling.
+- `references/implementation-notes.md`: choosing CSS, Web Animations API, Framer Motion, GSAP, Canvas, WebGL, or Three.js, plus performance and verification details.
+- `references/review-rubric.md`: reviewing existing animation and writing actionable findings with severity, risk, recommendation, and verification.
+
 ## Motion Plan
 
 For non-trivial work, form a short plan before implementation:

@@ -64,15 +64,33 @@ The `references/` folder adds optional depth without bloating the main skill:
 | `references/implementation-notes.md` | Choosing CSS, WAAPI, Framer Motion, GSAP, Canvas, WebGL, or Three.js |
 | `references/review-rubric.md` | Auditing existing animation and writing actionable review findings |
 
+## Examples
+
+The `examples/` folder contains small generic snippets for common animation tasks:
+
+| File | Use For |
+| --- | --- |
+| `examples/button-feedback.css` | Immediate hover, focus, and pressed feedback |
+| `examples/modal-transition.css` | Backdrop and panel entrance/exit timing |
+| `examples/list-reorder.css` | Trackable list changes with object constancy |
+| `examples/reduced-motion.css` | Reduced-motion fallback patterns |
+
 ## Repository Layout
 
 ```text
 animation-craft/
+|-- LICENSE
 |-- SKILL.md
 |-- README.md
 |-- README.zh-CN.md
 |-- agents/
 |   `-- openai.yaml
+|-- examples/
+|   |-- README.md
+|   |-- button-feedback.css
+|   |-- list-reorder.css
+|   |-- modal-transition.css
+|   `-- reduced-motion.css
 `-- references/
     |-- animation-fundamentals.md
     |-- implementation-notes.md
@@ -83,4 +101,4 @@ animation-craft/
 
 ## License
 
-No license has been added yet. Add one before broader redistribution.
+MIT

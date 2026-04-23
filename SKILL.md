@@ -44,6 +44,7 @@ Load optional references only when the task needs more depth:
 - `references/motion-rules.md`: practical UI motion rules of thumb for feedback, hierarchy, continuity, restraint, and scene composition.
 - `references/implementation-notes.md`: choosing CSS, Web Animations API, Framer Motion, GSAP, Canvas, WebGL, or Three.js, plus performance and verification details.
 - `references/review-rubric.md`: reviewing existing animation and writing actionable findings with severity, risk, recommendation, and verification.
+- `examples/README.md`: small public snippets for buttons, modals, list changes, and reduced-motion behavior.
 
 ## Motion Plan
 

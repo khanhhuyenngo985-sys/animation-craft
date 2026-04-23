@@ -64,15 +64,33 @@ Use $animation-craft to review the modal and loading animations for accessibilit
 | `references/implementation-notes.md` | 选择 CSS、WAAPI、Framer Motion、GSAP、Canvas、WebGL 或 Three.js |
 | `references/review-rubric.md` | 评审已有动画，并写出可执行的问题、风险和建议 |
 
+## 示例
+
+`examples/` 文件夹包含一些常见动效任务的通用小片段：
+
+| 文件 | 用途 |
+| --- | --- |
+| `examples/button-feedback.css` | hover、focus 和 pressed 的即时反馈 |
+| `examples/modal-transition.css` | backdrop 和 panel 的入场/退出节奏 |
+| `examples/list-reorder.css` | 保持对象连续性的列表变化 |
+| `examples/reduced-motion.css` | reduced-motion 降级模式 |
+
 ## 仓库结构
 
 ```text
 animation-craft/
+|-- LICENSE
 |-- SKILL.md
 |-- README.md
 |-- README.zh-CN.md
 |-- agents/
 |   `-- openai.yaml
+|-- examples/
+|   |-- README.md
+|   |-- button-feedback.css
+|   |-- list-reorder.css
+|   |-- modal-transition.css
+|   `-- reduced-motion.css
 `-- references/
     |-- animation-fundamentals.md
     |-- implementation-notes.md
@@ -83,4 +101,4 @@ animation-craft/
 
 ## License
 
-这个仓库暂时还没有添加 license。如果要进一步分发，建议先补充 license。
+MIT

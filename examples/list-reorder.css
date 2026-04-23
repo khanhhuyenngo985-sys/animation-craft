@@ -1,0 +1,31 @@
+:root {
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.list-item {
+  transition:
+    opacity 180ms var(--ease-out-quart),
+    transform 240ms var(--ease-out-quart),
+    box-shadow 180ms var(--ease-out-quart);
+}
+
+.list-item[data-moving="true"] {
+  box-shadow: 0 10px 24px rgb(0 0 0 / 14%);
+  transform: translateY(var(--move-y, 0));
+  z-index: 1;
+}
+
+.list-item[data-entering="true"] {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.list-item[data-entering="false"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.list-item[data-removing="true"] {
+  opacity: 0;
+  transform: scale(0.98);
+}

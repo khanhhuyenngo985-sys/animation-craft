@@ -1,0 +1,36 @@
+:root {
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.modal-backdrop {
+  opacity: 0;
+  transition: opacity 180ms var(--ease-out-quart);
+}
+
+.modal-panel {
+  opacity: 0;
+  transform: translateY(12px) scale(0.98);
+  transition:
+    opacity 220ms var(--ease-out-quart),
+    transform 260ms var(--ease-out-quart);
+}
+
+.modal[data-open="true"] .modal-backdrop,
+.modal[data-open="true"] .modal-panel {
+  opacity: 1;
+}
+
+.modal[data-open="true"] .modal-panel {
+  transform: translateY(0) scale(1);
+}
+
+.modal[data-state="closing"] .modal-backdrop {
+  opacity: 0;
+  transition-duration: 140ms;
+}
+
+.modal[data-state="closing"] .modal-panel {
+  opacity: 0;
+  transform: translateY(8px) scale(0.99);
+  transition-duration: 180ms;
+}

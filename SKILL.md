@@ -39,7 +39,9 @@ If a motion idea cannot be tied to intent, cut or simplify it.
 
 Load optional references only when the task needs more depth:
 
+- `references/animation-fundamentals.md`: animation basics such as timing, spacing, anticipation, follow-through, arcs, squash/stretch, and silhouette.
 - `references/motion-principles.md`: planning motion language, hierarchy, staging, rhythm, object constancy, and state storytelling.
+- `references/motion-rules.md`: practical UI motion rules of thumb for feedback, hierarchy, continuity, restraint, and scene composition.
 - `references/implementation-notes.md`: choosing CSS, Web Animations API, Framer Motion, GSAP, Canvas, WebGL, or Three.js, plus performance and verification details.
 - `references/review-rubric.md`: reviewing existing animation and writing actionable findings with severity, risk, recommendation, and verification.
 

@@ -44,6 +44,8 @@ Use $animation-craft to review the modal and loading animations for accessibilit
 The core skill file gives the agent a compact workflow:
 
 - Start from the animation's job: feedback, continuity, guidance, or expression.
+- Apply animation fundamentals such as timing, spacing, anticipation, follow-through, arcs, and object weight.
+- Use practical motion rules for hierarchy, continuity, direction, restraint, and responsive feedback.
 - Write a tiny motion brief before significant changes.
 - Choose timing, easing, layering, and tooling based on the interaction.
 - Respect `prefers-reduced-motion`.
@@ -56,7 +58,9 @@ The `references/` folder adds optional depth without bloating the main skill:
 
 | File | Load When |
 | --- | --- |
+| `references/animation-fundamentals.md` | Learning animation basics: timing, spacing, anticipation, arcs, follow-through |
 | `references/motion-principles.md` | Planning motion language, hierarchy, staging, rhythm, and state storytelling |
+| `references/motion-rules.md` | Applying practical UI motion rules for feedback, hierarchy, continuity, and restraint |
 | `references/implementation-notes.md` | Choosing CSS, WAAPI, Framer Motion, GSAP, Canvas, WebGL, or Three.js |
 | `references/review-rubric.md` | Auditing existing animation and writing actionable review findings |
 
@@ -70,11 +74,13 @@ animation-craft/
 |-- agents/
 |   `-- openai.yaml
 `-- references/
+    |-- animation-fundamentals.md
     |-- implementation-notes.md
     |-- motion-principles.md
+    |-- motion-rules.md
     `-- review-rubric.md
 ```
 
 ## License
 
-No license has been added yet. Add one before redistributing beyond normal GitHub viewing or internal use.
+No license has been added yet. Add one before broader redistribution.

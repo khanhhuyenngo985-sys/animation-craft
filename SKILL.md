@@ -1,17 +1,17 @@
 ---
 name: animation-craft
-description: Use when creating, refining, or reviewing UI animation, motion design, transitions, micro-interactions, hover effects, loading states, scroll effects, canvas/SVG motion, Three.js motion, or interfaces that should feel more alive.
+description: Use when creating, refining, or reviewing animation, animated shorts, storyboards, animatics, character motion, scene timing, UI motion design, transitions, micro-interactions, canvas/SVG motion, Three.js motion, or interfaces that should feel more alive.
 ---
 
 # Animation Craft
 
 ## Overview
 
-Use animation to clarify cause and effect, guide attention, provide feedback, and add character. Motion should make the interface easier to understand first, more delightful second.
+Use animation to clarify cause and effect, guide attention, provide feedback, tell small stories, and add character. Motion should make the moment easier to understand first, more delightful second.
 
 ## Start Here
 
-Before adding motion, inspect the existing product, audience, design language, and technical stack. If the context is unclear, make a reasonable assumption and keep the first pass restrained.
+Before adding motion, inspect the medium, audience, story or interaction goal, visual language, and technical stack. If the context is unclear, make a reasonable assumption and keep the first pass restrained.
 
 Identify the animation's job:
 
@@ -19,6 +19,7 @@ Identify the animation's job:
 - Continuity: make show/hide, route changes, tabs, drawers, modals, and layout changes feel connected.
 - Guidance: direct attention to the next meaningful thing.
 - Expression: give a hero, game scene, empty state, or brand moment a memorable personality.
+- Story: show a character choice, emotional beat, gag, reveal, or scene transition.
 
 Choose one primary motion moment, then add supporting micro-interactions. A few coordinated animations usually feel better than many unrelated ones.
 
@@ -29,7 +30,8 @@ For substantial animation work, write a tiny working brief before editing:
 - Intent: what should the user understand or feel after the motion?
 - Subject: what is the main moving element, and what should stay calm?
 - Trigger: load, hover, click, drag, scroll, route change, data update, or time.
-- Scale: micro, component, page, scene, or full experience.
+- Format: UI motion, loop, animated short, storyboard, animatic, game scene, or 3D scene.
+- Scale: micro, component, shot, page, scene, or full experience.
 - Tone: calm, precise, playful, cinematic, technical, organic, or game-like.
 - Constraint: performance budget, device class, accessibility, or framework limits.
 
@@ -40,17 +42,19 @@ If a motion idea cannot be tied to intent, cut or simplify it.
 Load optional references only when the task needs more depth:
 
 - `references/animation-fundamentals.md`: animation basics such as timing, spacing, anticipation, follow-through, arcs, squash/stretch, and silhouette.
+- `references/animated-shorts.md`: planning animated shorts, story beats, shot lists, storyboards, animatics, character action, and scene review.
 - `references/motion-principles.md`: planning motion language, hierarchy, staging, rhythm, object constancy, and state storytelling.
 - `references/motion-rules.md`: practical UI motion rules of thumb for feedback, hierarchy, continuity, restraint, and scene composition.
 - `references/implementation-notes.md`: choosing CSS, Web Animations API, Framer Motion, GSAP, Canvas, WebGL, or Three.js, plus performance and verification details.
 - `references/review-rubric.md`: reviewing existing animation and writing actionable findings with severity, risk, recommendation, and verification.
-- `examples/README.md`: small public snippets for buttons, modals, list changes, and reduced-motion behavior.
+- `examples/README.md`: small public snippets and templates for UI motion, reduced-motion behavior, and storyboard planning.
 
 ## Motion Plan
 
 For non-trivial work, form a short plan before implementation:
 
 - Signature moment: the one animation users should remember.
+- Story or shot beat: the emotional or narrative change the motion should communicate.
 - Feedback layer: interactions that need immediate visual acknowledgment.
 - Transition layer: state changes that currently feel abrupt.
 - Accessibility layer: how reduced-motion users experience the same flow.
@@ -108,6 +112,7 @@ Use the simplest tool that can express the motion well:
 - GSAP for timeline-heavy animation, complex choreography, or SVG/canvas-heavy sequences.
 - Canvas or WebGL for particle systems, games, simulations, and full-bleed interactive scenes.
 - Three.js for 3D motion; verify the canvas is nonblank, framed correctly, and interactive.
+- Storyboards and animatics for narrative animation before investing in final polish.
 
 Prefer animating `transform` and `opacity`. Avoid animating layout properties such as `top`, `left`, `width`, `height`, and `margin` unless there is a strong reason and performance is verified.
 
@@ -165,6 +170,15 @@ Scene-based or game-like motion:
 - Keep controls and readable text stable even when the scene is lively.
 - Use motion to communicate rules, physics, and consequences.
 - Verify the first rendered frame is meaningful; avoid blank or confusing starts.
+
+Animated shorts:
+
+- Start from a simple premise, not a list of effects.
+- Define the character, want, obstacle, turn, and final beat.
+- Plan shots before polishing motion.
+- Use thumbnails, shot lists, or animatics to test timing cheaply.
+- Keep staging readable: one main action per shot unless chaos is the point.
+- Review story clarity before refining secondary motion.
 
 ## Examples
 

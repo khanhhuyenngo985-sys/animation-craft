@@ -1,0 +1,4 @@
+interface:
+  display_name: "Animation Craft"
+  short_description: "Craft purposeful UI motion and animation"
+  default_prompt: "Use $animation-craft to refine this interface with purposeful motion."

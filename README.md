@@ -11,7 +11,6 @@ Animation Craft helps an agent decide why something should move, how much motion
 | Motion design | Micro-interactions, transitions, loading states, scroll effects, page entrances |
 | Implementation | CSS transitions, Web Animations API, Framer Motion, GSAP, Canvas, WebGL, Three.js |
 | Quality review | Jank, timing, accessibility, layout shifts, reduced motion, visual hierarchy |
-| Public safety | Useful public guidance without private style recipes or proprietary assets |
 
 ## Install
 
@@ -75,10 +74,6 @@ animation-craft/
     |-- motion-principles.md
     `-- review-rubric.md
 ```
-
-## Public Boundary
-
-This is a public skill. It intentionally contains general heuristics, safe defaults, and review rubrics, not private animation recipes, signature sequences, proprietary prompts, client examples, or reusable internal assets.
 
 ## License
 

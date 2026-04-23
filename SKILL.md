@@ -9,8 +9,6 @@ description: Use when creating, refining, or reviewing UI animation, motion desi
 
 Use animation to clarify cause and effect, guide attention, provide feedback, and add character. Motion should make the interface easier to understand first, more delightful second.
 
-This is a public skill. Keep guidance broadly useful and avoid embedding private style systems, proprietary presets, internal prompts, unreleased brand recipes, project-specific choreography, or reusable source assets.
-
 ## Start Here
 
 Before adding motion, inspect the existing product, audience, design language, and technical stack. If the context is unclear, make a reasonable assumption and keep the first pass restrained.
@@ -165,7 +163,7 @@ Scene-based or game-like motion:
 - Use motion to communicate rules, physics, and consequences.
 - Verify the first rendered frame is meaningful; avoid blank or confusing starts.
 
-## Public-Safe Examples
+## Examples
 
 Use examples as neutral starting points, then adapt to the product's existing design language.
 
@@ -230,7 +228,7 @@ Loading handoff:
 }
 ```
 
-These snippets are intentionally plain. Do not treat them as a signature style.
+These snippets are intentionally plain starting points.
 
 ## Accessibility
 
@@ -289,16 +287,6 @@ Before claiming the animation work is done:
 - Run the relevant lint, typecheck, test, or build command when available.
 
 When possible, inspect the work at normal speed and with slower playback or repeated interaction. Many animation problems only appear during the transition, not in the final frame.
-
-## Public Release Boundary
-
-This skill may be published publicly. Keep it useful without revealing private craft:
-
-- Include general heuristics, checklists, accessibility practices, and framework selection guidance.
-- Include small generic snippets that teach safe defaults.
-- Do not include private animation recipes, exact signature sequences, proprietary prompts, internal examples, client work, private assets, or named style systems.
-- Do not encode a single recognizable house style as the default output.
-- If a technique feels like a competitive advantage, describe the decision principle instead of the exact implementation.
 
 ## Common Mistakes
 

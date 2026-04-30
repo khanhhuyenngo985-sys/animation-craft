@@ -9,6 +9,7 @@ Animation Craft helps an agent decide why something should move, what story or i
 | Focus | What It Helps With |
 | --- | --- |
 | Animated shorts | Story beats, shot lists, storyboard structure, animatics, character action |
+| Visual storytelling | Silent acting, readable scene constraints, prop-driven cause and effect |
 | Motion design | Micro-interactions, transitions, loading states, scroll effects, page entrances |
 | Implementation | CSS transitions, Web Animations API, Framer Motion, GSAP, Canvas, WebGL, Three.js |
 | Quality review | Jank, timing, accessibility, layout shifts, reduced motion, visual hierarchy |
@@ -50,6 +51,7 @@ The core skill file gives the agent a compact workflow:
 
 - Start from the animation's job: feedback, continuity, guidance, or expression.
 - Shape animated shorts with premise, beats, shot planning, staging, and animatic timing.
+- Communicate visual-first story beats through posture, props, setting, stillness, and sound cues.
 - Apply animation fundamentals such as timing, spacing, anticipation, follow-through, arcs, and object weight.
 - Use practical motion rules for hierarchy, continuity, direction, restraint, and responsive feedback.
 - Write a tiny motion brief before significant changes.
@@ -66,6 +68,7 @@ The `references/` folder adds optional depth without bloating the main skill:
 | --- | --- |
 | `references/animation-fundamentals.md` | Learning animation basics: timing, spacing, anticipation, arcs, follow-through |
 | `references/animated-shorts.md` | Planning animated shorts, storyboards, shot lists, animatics, and character action |
+| `references/visual-storytelling.md` | Making visual-first story beats readable without relying on dialogue or private style recipes |
 | `references/motion-principles.md` | Planning motion language, hierarchy, staging, rhythm, and state storytelling |
 | `references/motion-rules.md` | Applying practical UI motion rules for feedback, hierarchy, continuity, and restraint |
 | `references/implementation-notes.md` | Choosing CSS, WAAPI, Framer Motion, GSAP, Canvas, WebGL, or Three.js |
@@ -106,7 +109,8 @@ animation-craft/
     |-- implementation-notes.md
     |-- motion-principles.md
     |-- motion-rules.md
-    `-- review-rubric.md
+    |-- review-rubric.md
+    `-- visual-storytelling.md
 ```
 
 ## License

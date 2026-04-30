@@ -1,6 +1,6 @@
 ---
 name: animation-craft
-description: Use when creating, refining, or reviewing animation, animated shorts, storyboards, animatics, character motion, scene timing, UI motion design, transitions, micro-interactions, canvas/SVG motion, Three.js motion, or interfaces that should feel more alive.
+description: Use when creating, refining, or reviewing animation, animated shorts, visual storytelling, storyboards, animatics, character motion, scene timing, UI motion design, transitions, micro-interactions, canvas/SVG motion, Three.js motion, or interfaces that should feel more alive.
 ---
 
 # Animation Craft
@@ -43,6 +43,7 @@ Load optional references only when the task needs more depth:
 
 - `references/animation-fundamentals.md`: animation basics such as timing, spacing, anticipation, follow-through, arcs, squash/stretch, and silhouette.
 - `references/animated-shorts.md`: planning animated shorts, story beats, shot lists, storyboards, animatics, character action, and scene review.
+- `references/visual-storytelling.md`: public guidance for readable visual story beats, silent acting, scene constraints, breathing room, sound cues, and originality boundaries.
 - `references/motion-principles.md`: planning motion language, hierarchy, staging, rhythm, object constancy, and state storytelling.
 - `references/motion-rules.md`: practical UI motion rules of thumb for feedback, hierarchy, continuity, restraint, and scene composition.
 - `references/implementation-notes.md`: choosing CSS, Web Animations API, Framer Motion, GSAP, Canvas, WebGL, or Three.js, plus performance and verification details.
@@ -178,6 +179,7 @@ Animated shorts:
 - Plan shots before polishing motion.
 - Use thumbnails, shot lists, or animatics to test timing cheaply.
 - Keep staging readable: one main action per shot unless chaos is the point.
+- For visual-first stories, make posture, props, setting, stillness, and sound cues carry meaning before adding dialogue.
 - Review story clarity before refining secondary motion.
 
 ## Examples

@@ -1,6 +1,6 @@
 # Visual Storytelling
 
-Use this reference when an animated short, cartoon scene, storyboard, animatic, game moment, or expressive interface should communicate through images and action before explanation.
+Use this reference when an animated short, cartoon scene, storyboard, animatic, game moment, or AI-video shot should communicate through images and action before explanation.
 
 ## Public Boundary
 
@@ -12,7 +12,7 @@ Before writing dialogue, effects, or polish, make sure the beat can be read visu
 
 - First frame: the viewer can identify subject, place, and current pressure.
 - Want: posture, gaze, hand position, or travel direction shows what the subject is trying to do.
-- Obstacle: a prop, layout, surface, distance, rule, or other character blocks the action.
+- Obstacle: a prop, surface, distance, threshold, rule, or other character blocks the action.
 - Change: the shot shows what is different after the action.
 - Consequence: the final frame makes the next beat easy to continue.
 

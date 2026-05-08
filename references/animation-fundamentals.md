@@ -1,22 +1,22 @@
 # Animation Fundamentals
 
-Use this reference when the task needs basic animation craft before choosing a UI implementation.
+Use this reference when an animation video needs basic craft: timing, spacing, anticipation, follow-through, arcs, squash/stretch, silhouette, weight, and camera.
 
 ## Timing
 
 Timing is the duration of a motion and the distribution of events inside it.
 
-- Short timing feels responsive, decisive, or lightweight.
-- Long timing feels important, cinematic, or heavy.
-- Feedback should be fast enough that the user knows the input was received.
-- Entrances can take longer than exits because they introduce new information.
-- Repeated loops should be slow or subtle enough to avoid attention fatigue.
+- Short timing feels sharp, nervous, light, comic, or decisive.
+- Long timing feels heavy, important, ceremonial, tender, or ominous.
+- Holds help the viewer read decisions, reveals, and emotional turns.
+- Reactions need time after impact; otherwise the action feels weightless.
+- Loops should be slow, purposeful, or varied enough to avoid attention fatigue.
 
-When a motion feels wrong, first check whether the duration matches the importance of the event.
+When a shot feels wrong, first check whether the duration matches the importance of the event.
 
 ## Spacing
 
-Spacing is how far an object moves between frames. It creates the feeling of acceleration, deceleration, and weight.
+Spacing is how far an object moves between frames. It creates acceleration, deceleration, and weight.
 
 - Even spacing feels mechanical.
 - Tight spacing at the end creates a soft settle.
@@ -24,101 +24,101 @@ Spacing is how far an object moves between frames. It creates the feeling of acc
 - Wider spacing in the middle creates speed.
 - Sudden spacing changes create impact or surprise.
 
-In CSS and UI tools, easing controls spacing. Choose easing based on how the object should feel, not only on what looks smooth.
+Choose spacing based on the body, object, camera, and force involved.
 
 ## Ease In And Ease Out
 
 Most natural motion does not start or stop at full speed.
 
-- Ease-out is useful for UI feedback and entrances because the object arrives cleanly.
-- Ease-in is useful for exits because the object leaves quickly after starting.
-- Ease-in-out is useful for repositioning or two-way state changes.
-- Linear motion is useful for progress, clocks, marquee movement, or mechanical systems.
+- Ease-out helps an object arrive cleanly.
+- Ease-in helps an object leave, drop, or commit to a direction.
+- Ease-in-out helps a camera, body, or prop move between two meaningful states.
+- Linear motion works for machines, clocks, conveyor movement, ritual repetition, or unnatural forces.
 
-Avoid using the same easing everywhere. Motion should reflect the role of the object and the type of state change.
+Avoid using the same motion feel everywhere. A sleeve, sword, lantern, eyelid, camera, and falling stone should not share identical timing.
 
 ## Anticipation
 
-Anticipation prepares the user for a change.
+Anticipation prepares the viewer for action.
 
-- A pressed button can compress slightly before triggering a larger response.
-- A drawer can begin with a small directional hint before opening.
-- A draggable item can lift before it moves.
-- A scene transition can shift focus before the main motion starts.
+- A body lowers before jumping.
+- A hand pauses before touching a forbidden object.
+- A lantern swings backward before crossing the frame.
+- A camera settles for a half beat before a reveal.
+- A breath, blink, or tiny sound can prepare an emotional turn.
 
-In UI, anticipation should usually be brief. If it delays action, it may feel like latency.
+If the action feels random, add anticipation. If the shot feels slow, shorten or sharpen the anticipation.
 
 ## Follow-Through And Settle
 
 Motion often feels better when it does not stop abruptly.
 
-- A panel can decelerate into place.
-- A selected item can settle after being moved.
-- A count or value update can briefly emphasize the changed number.
-- A success state can finish with a small confirmation.
+- Cloth continues after the body stops.
+- Hair, sleeve, dust, water, smoke, or light trails lag behind the main force.
+- A character absorbs impact through knees, shoulders, jaw, breath, or gaze.
+- The environment keeps a residue: dust, ripples, echo, drifting ash, swinging rope.
 
-Settle should support clarity. Do not add extra movement after the user is ready to continue.
+Settle should reveal consequence, not decorate the end.
 
 ## Overlap
 
-Overlapping action means related elements do not all move at exactly the same time.
+Overlapping action means related parts do not all move at exactly the same time.
 
-- The main element can move first.
-- Labels, shadows, icons, or supporting elements can follow shortly after.
-- Groups can stagger by small intervals to reveal hierarchy.
+- The torso starts, then head, arms, hair, cloth, and props follow.
+- A heavy object moves first; debris and sound trail after.
+- A crowd, leaves, smoke, or water responds with delayed timing.
 
-Use overlap to make relationships readable. Avoid stagger for every list item if the order does not matter.
+Use overlap to show material, weight, and force.
 
 ## Arcs
 
-Natural motion often follows arcs rather than perfectly straight lines.
+Natural movement often follows arcs rather than perfectly straight lines.
 
-- Small arcs can make icons, cursors, particles, or scene objects feel less robotic.
-- Straight movement can feel precise, technical, or mechanical.
-- UI layout transitions usually need restrained arcs so elements still feel aligned.
+- Hands, heads, weapons, cloth, and thrown objects usually arc.
+- Straight movement can feel precise, mechanical, supernatural, or ritualized.
+- Camera arcs can reveal space, status, or hidden relationships.
 
-Choose arcs only when they improve meaning or feel. Many product surfaces should stay geometrically calm.
+Choose arcs only when they improve meaning or physical believability.
 
 ## Squash And Stretch
 
-Squash and stretch communicates softness, elasticity, and impact.
+Squash and stretch communicates softness, elasticity, force, and impact.
 
-- Use tiny scale changes for pressed states.
-- Use it more freely in games, playful empty states, or expressive illustrations.
-- Avoid large squash/stretch on serious product controls.
-- Never distort readable text.
+- Use it for cartoon bodies, creatures, soft props, impact beats, and comic timing.
+- Keep face identity stable when using stretch in AI-video prompts.
+- Avoid stretching rigid objects unless the style intentionally bends physics.
 
-In UI, scale is a seasoning, not the meal.
+The amount of deformation should match material and tone.
 
 ## Silhouette
 
-The user should understand the moving object even during motion.
+The viewer should understand the moving subject even during motion.
 
-- Keep important shapes recognizable.
-- Avoid overlapping text and controls during transitions.
-- Make the first frame and final frame readable.
-- For canvas and 3D scenes, check the object against the background at peak motion.
+- Keep important shapes recognizable at the first frame, peak frame, and final frame.
+- Avoid overlapping the main action with busy backgrounds.
+- Separate characters by height, posture, color, light, distance, or rhythm.
+- Make contact frames and object ownership readable.
 
 If the silhouette becomes unclear, reduce motion, simplify the path, or quiet the background.
 
 ## Weight
 
-Perceived weight comes from distance, speed, easing, scale, shadow, and reaction.
+Perceived weight comes from distance, speed, spacing, deformation, sound, and reaction.
 
-- Heavy objects usually start slower and settle more deliberately.
-- Light objects can respond quickly and travel less.
-- Large surfaces need calmer motion than small icons.
-- Shadows and depth changes should agree with the movement.
+- Heavy bodies start slower and settle more deliberately.
+- Light objects respond quickly and may overshoot.
+- Large creatures need delayed secondary motion and environmental response.
+- Small delicate objects need precise contact and tiny sound cues.
 
-Do not make every element feel equally heavy. Motion hierarchy helps the interface feel organized.
+Do not make every element feel equally heavy. Weight tells the viewer what kind of world this is.
 
-## Camera And Viewport
+## Camera
 
-For scenes, games, canvas, WebGL, and Three.js, the camera is part of the animation.
+The camera is part of the animation.
 
-- Decide whether the object moves, the camera moves, or both.
-- Keep UI controls and text stable while the scene moves.
-- Check the first rendered frame before assets finish loading.
-- Verify framing on mobile and desktop.
+- Decide whether the subject moves, the camera moves, or both.
+- Keep the key action visible at contact, turn, and final state.
+- Use camera movement to reveal, pursue, pressure, isolate, or release.
+- Avoid camera energy that hides body acting or prop interaction.
 
-Camera motion is powerful. Use it to clarify space, not to show off.
+Camera motion is powerful. Use it to clarify space and emotion, not to show off.

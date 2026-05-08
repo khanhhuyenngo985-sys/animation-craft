@@ -1,317 +1,138 @@
 ---
 name: animation-craft
-description: Use when creating, refining, or reviewing animation, animated shorts, visual storytelling, storyboards, animatics, character motion, scene timing, UI motion design, transitions, micro-interactions, canvas/SVG motion, Three.js motion, or interfaces that should feel more alive.
+description: Use when creating, refining, or reviewing animation videos, animated shorts, storyboards, animatics, AI-video shots, character performance, scene timing, camera motion, action beats, continuity, editing rhythm, sound cues, or image-to-video prompt plans for Seedance/即梦/可灵/海螺 style workflows. Do not use this as a frontend/UI motion skill unless the user explicitly asks for interface animation.
 ---
 
 # Animation Craft
 
-## Overview
+## Core Positioning
 
-Use animation to clarify cause and effect, guide attention, provide feedback, tell small stories, and add character. Motion should make the moment easier to understand first, more delightful second.
+This skill is for making animation videos. It is not a frontend animation or UI micro-interaction skill.
+
+Use it to turn an idea, scene, character, reference, or rough prompt into a watchable animated sequence with clear story beats, readable staging, stable identity, useful camera movement, and video-model-ready shot instructions.
 
 ## Start Here
 
-Before adding motion, inspect the medium, audience, story or interaction goal, visual language, and technical stack. If the context is unclear, make a reasonable assumption and keep the first pass restrained.
+Before producing assets or prompts, identify:
 
-Identify the animation's job:
+- Format: animated short, 5-15s AI-video shot, multi-shot sequence, animatic, storyboard, action segment, ad film, MV beat, or style test.
+- Audience effect: joke, emotion, awe, clarity, product proof, character charm, suspense, or action impact.
+- Main subject: character, creature, object, environment, product, vehicle, or abstract force.
+- Change: what is visibly different by the end of the shot or sequence.
+- Production target: storyboard, shot list, animatic timing, Seedance/即梦/可灵/海螺 prompt, review notes, or repair plan.
 
-- Feedback: acknowledge a click, hover, drag, save, error, or success.
-- Continuity: make show/hide, route changes, tabs, drawers, modals, and layout changes feel connected.
-- Guidance: direct attention to the next meaningful thing.
-- Expression: give a hero, game scene, empty state, or brand moment a memorable personality.
-- Story: show a character choice, emotional beat, gag, reveal, or scene transition.
+If the user asks for a quick prompt, still define the shot's beginning, motion, and ending before adding style words.
 
-Choose one primary motion moment, then add supporting micro-interactions. A few coordinated animations usually feel better than many unrelated ones.
+## Video Brief
 
-## Animation Brief
+For substantial work, produce this compact brief first:
 
-For substantial animation work, write a tiny working brief before editing:
+| Field | Answer |
+| --- | --- |
+| Premise / task |  |
+| Format + duration |  |
+| Main subject |  |
+| Visual change |  |
+| Emotional beat |  |
+| Camera logic |  |
+| Continuity anchors |  |
+| Sound / rhythm cue |  |
+| Model target | Seedance / 即梦 / 可灵 / 海螺 / other |
+| Output needed | beat sheet / shot list / prompt / review / repair |
 
-- Intent: what should the user understand or feel after the motion?
-- Subject: what is the main moving element, and what should stay calm?
-- Trigger: load, hover, click, drag, scroll, route change, data update, or time.
-- Format: UI motion, loop, animated short, storyboard, animatic, game scene, or 3D scene.
-- Scale: micro, component, shot, page, scene, or full experience.
-- Tone: calm, precise, playful, cinematic, technical, organic, or game-like.
-- Constraint: performance budget, device class, accessibility, or framework limits.
+## Runtime Flow
 
-If a motion idea cannot be tied to intent, cut or simplify it.
+1. Lock the story or motion job.
+   - One shot should establish, reveal, pressure, turn, release, or land a final beat.
+   - Remove decorative movement that does not change attention, emotion, information, or consequence.
+
+2. Stage the first readable frame.
+   - The viewer should immediately know subject, location, scale, pressure, and visual direction.
+   - Keep one main action per shot unless controlled chaos is the point.
+
+3. Design movement as cause and effect.
+   - Want becomes reach, gaze, lean, travel direction, grip, or camera pursuit.
+   - Obstacle becomes distance, threshold, surface, opposing force, prop failure, crowd, weather, or timing pressure.
+   - Consequence becomes residue, deformation, prop state, body state, lighting change, silence, or next-shot inheritance.
+
+4. Plan timing.
+   - Use setup, anticipation, action, impact, reaction, and settle.
+   - For AI video, timebox changes with visible 0-2s / 2-5s / 5-8s / 8-15s beats when useful.
+   - Let big turns breathe; do not fill every second with new information.
+
+5. Protect continuity.
+   - Lock character identity, scene identity, prop ownership, screen direction, light source, weather, damage, and ending state.
+   - For multi-segment work, state what the next segment must inherit in its first two seconds.
+
+6. Handoff to production.
+   - For storyboard: output panels with duration, camera, action, and transition.
+   - For AI video: output prompt-ready shot blocks with timing, camera, subject motion, environment reaction, audio cue, and forbidden drift.
+   - For review: lead with story/staging/timing/continuity findings before polish.
 
 ## Knowledge Base
 
-Load optional references only when the task needs more depth:
+Load optional references only when needed:
 
-- `references/animation-fundamentals.md`: animation basics such as timing, spacing, anticipation, follow-through, arcs, squash/stretch, and silhouette.
-- `references/animated-shorts.md`: planning animated shorts, story beats, shot lists, storyboards, animatics, character action, and scene review.
-- `references/visual-storytelling.md`: public guidance for readable visual story beats, silent acting, scene constraints, breathing room, sound cues, and originality boundaries.
-- `references/motion-principles.md`: planning motion language, hierarchy, staging, rhythm, object constancy, and state storytelling.
-- `references/motion-rules.md`: practical UI motion rules of thumb for feedback, hierarchy, continuity, restraint, and scene composition.
-- `references/implementation-notes.md`: choosing CSS, Web Animations API, Framer Motion, GSAP, Canvas, WebGL, or Three.js, plus performance and verification details.
-- `references/review-rubric.md`: reviewing existing animation and writing actionable findings with severity, risk, recommendation, and verification.
-- `examples/README.md`: small public snippets and templates for UI motion, reduced-motion behavior, and storyboard planning.
-
-## Motion Plan
-
-For non-trivial work, form a short plan before implementation:
-
-- Signature moment: the one animation users should remember.
-- Story or shot beat: the emotional or narrative change the motion should communicate.
-- Feedback layer: interactions that need immediate visual acknowledgment.
-- Transition layer: state changes that currently feel abrupt.
-- Accessibility layer: how reduced-motion users experience the same flow.
-- Verification target: screenshot, Playwright check, browser inspection, or manual interaction.
-
-## Timing
-
-Use durations by purpose:
-
-| Purpose | Duration |
+| File | Read when |
 | --- | --- |
-| Tap, click, toggle, pressed state | 80-160ms |
-| Hover, focus, small feedback | 120-220ms |
-| Menu, popover, tooltip, tab content | 180-300ms |
-| Drawer, modal, accordion, layout transition | 250-450ms |
-| Page entrance, hero sequence, scene reveal | 450-800ms |
+| `references/animated-shorts.md` | Planning animated shorts, beat sheets, shot lists, storyboards, animatics, character action |
+| `references/visual-storytelling.md` | Making a beat readable through pose, props, setting, silence, and consequence |
+| `references/animation-fundamentals.md` | Timing, spacing, anticipation, follow-through, arcs, squash/stretch, silhouette |
+| `references/motion-principles.md` | Video motion language, staging, rhythm, camera/object hierarchy, state change |
+| `references/motion-rules.md` | Practical rules for readable shot motion, continuity, loops, action, and camera movement |
+| `references/implementation-notes.md` | AI-video production notes, model handoff, prompt timing, review, and verification |
+| `references/review-rubric.md` | Reviewing generated animation videos or animatics with severity and fixes |
+| `examples/storyboard-template.md` | Storyboard panel planning |
+| `examples/ai-video-shot-template.md` | Seedance/即梦/可灵 style timed shot prompt |
+| `examples/continuity-ledger.md` | Multi-shot continuity ledger |
 
-Exit animations should usually be faster than entrance animations. Use about 70-80% of the enter duration.
+## Output Patterns
 
-Prefer natural deceleration:
+### Shot Prompt Block
 
-```css
-:root {
-  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
-  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
-  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-in-out-soft: cubic-bezier(0.65, 0, 0.35, 1);
-}
+```text
+SHOT [number] / [duration] / [aspect]
+Purpose:
+Mounted references:
+First frame:
+0-2s:
+2-5s:
+5-8s:
+8-15s:
+Camera:
+Character / object motion:
+Scene reaction:
+Audio:
+Continuity inheritance:
+Forbidden drift:
 ```
 
-Avoid default-feeling motion. Avoid bouncy or elastic easing unless the product style explicitly calls for playfulness.
+### Review Order
 
-## Staging And Rhythm
+When reviewing an animation video, diagnose in this order:
 
-Borrow from animation staging without overcomplicating UI:
+1. Story clarity: can the viewer explain what changed?
+2. Staging: is the main action readable in the first frame and peak frame?
+3. Timing: do anticipation, action, impact, reaction, and settle have enough space?
+4. Performance: does the body/face/prop motion reveal intention?
+5. Continuity: do identity, scene state, prop state, screen direction, and light track?
+6. Production polish: camera smoothness, flicker, morphing, texture, sound, edit point.
 
-- Establish stillness before motion so the moving element has contrast.
-- Move the most important element first; supporting elements follow.
-- Use stagger to reveal hierarchy, not to decorate every item.
-- Let motion settle cleanly before asking for the next decision.
-- Keep repeated loops subtle; looping motion should not compete with reading or clicking.
-- Use distance to imply importance: important elements can travel farther, utility controls should move less.
-- Use scale changes sparingly; large scale shifts can feel cheap or destabilizing.
+Do not polish style before story, staging, timing, and continuity work.
 
-For page or scene animation, think in beats: setup, reveal, response, settle. Most UI moments only need two or three beats.
+## AI Video Guardrails
 
-## Implementation Guidance
+- Do not describe only a beautiful still image; describe visible change over time.
+- Do not rely on abstract emotion words. Convert emotion into posture, gaze, breath, hesitation, contact, residue, or silence.
+- Do not overpack 15 seconds. Give each beat a physical action and a readable ending state.
+- Do not let character identity drift while the state changes.
+- Do not invent UI, subtitles, text, logos, app screens, or webpage behavior unless the project explicitly requires them.
 
-Use the simplest tool that can express the motion well:
+## When To Hand Off
 
-- CSS transitions for hover, focus, pressed states, color, opacity, and transform.
-- CSS keyframes for simple repeated or entrance sequences.
-- Web Animations API for controlled imperative animations without adding a library.
-- Framer Motion in React projects that already use it or need shared layout transitions.
-- GSAP for timeline-heavy animation, complex choreography, or SVG/canvas-heavy sequences.
-- Canvas or WebGL for particle systems, games, simulations, and full-bleed interactive scenes.
-- Three.js for 3D motion; verify the canvas is nonblank, framed correctly, and interactive.
-- Storyboards and animatics for narrative animation before investing in final polish.
-
-Prefer animating `transform` and `opacity`. Avoid animating layout properties such as `top`, `left`, `width`, `height`, and `margin` unless there is a strong reason and performance is verified.
-
-Use `will-change` sparingly and remove it when the element is no longer animating if possible.
-
-## Layering
-
-Good motion often comes from layered changes, not one dramatic effect:
-
-- Primary layer: the element whose state is changing.
-- Context layer: nearby labels, icons, shadows, or surfaces that explain the change.
-- Ambient layer: background or decorative motion, used only when it does not reduce clarity.
-
-Use no more layers than the moment needs. If three animated things compete for attention, choose the one that carries meaning and quiet the rest.
-
-## Patterns
-
-Entrance:
-
-- Fade plus subtle translate or scale.
-- Stagger related elements by 60-140ms.
-- Keep the primary action available quickly.
-
-Micro-interactions:
-
-- Buttons: hover lift or color shift, pressed scale, loading state.
-- Inputs: focus transition, validation color, success/error icon motion.
-- Toggles and switches: thumb translation plus color transition.
-- Drag/drop: lift on grab, highlight valid targets, animate settle.
-
-State transitions:
-
-- Modals and drawers: fade backdrop, transform panel, manage focus.
-- Tabs and filters: animate active indicator and crossfade content.
-- Expand/collapse: prefer grid, transform, or measured transitions that avoid jumpy layout.
-- Loading: skeletons or progress indicators that reduce perceived wait.
-
-Expressive moments:
-
-- Hero sections: one strong reveal or continuous scene, not decorative clutter.
-- Empty states: gentle movement that does not distract from the next action.
-- Completion: small success flourish; avoid oversized celebration unless the domain warrants it.
-
-State as story:
-
-- Loading should communicate progress, not just waiting.
-- Error motion should locate the problem without punishing the user.
-- Success motion should confirm completion and return the user to flow.
-- Disabled states should feel unavailable without feeling broken.
-- Data changes should preserve object constancy when possible.
-
-Scene-based or game-like motion:
-
-- Define the camera or viewport relationship before animating objects.
-- Keep controls and readable text stable even when the scene is lively.
-- Use motion to communicate rules, physics, and consequences.
-- Verify the first rendered frame is meaningful; avoid blank or confusing starts.
-
-Animated shorts:
-
-- Start from a simple premise, not a list of effects.
-- Define the character, want, obstacle, turn, and final beat.
-- Plan shots before polishing motion.
-- Use thumbnails, shot lists, or animatics to test timing cheaply.
-- Keep staging readable: one main action per shot unless chaos is the point.
-- For visual-first stories, make posture, props, setting, stillness, and sound cues carry meaning before adding dialogue.
-- Review story clarity before refining secondary motion.
-
-## Examples
-
-Use examples as neutral starting points, then adapt to the product's existing design language.
-
-Button feedback:
-
-```css
-.button {
-  transition:
-    transform 140ms var(--ease-out-quart),
-    box-shadow 180ms var(--ease-out-quart),
-    background-color 180ms var(--ease-out-quart);
-}
-
-.button:hover {
-  transform: translateY(-1px);
-}
-
-.button:active {
-  transform: translateY(0) scale(0.98);
-}
-```
-
-Modal entrance:
-
-```css
-.modal-backdrop {
-  opacity: 0;
-  transition: opacity 180ms var(--ease-out-quart);
-}
-
-.modal-panel {
-  opacity: 0;
-  transform: translateY(12px) scale(0.98);
-  transition:
-    opacity 220ms var(--ease-out-quart),
-    transform 260ms var(--ease-out-quart);
-}
-
-.modal[data-open="true"] .modal-backdrop,
-.modal[data-open="true"] .modal-panel {
-  opacity: 1;
-}
-
-.modal[data-open="true"] .modal-panel {
-  transform: translateY(0) scale(1);
-}
-```
-
-Loading handoff:
-
-```css
-.content-shell {
-  transition: opacity 220ms var(--ease-out-quart);
-}
-
-.content-shell[data-loading="true"] {
-  opacity: 0.62;
-}
-
-.content-shell[data-loading="false"] {
-  opacity: 1;
-}
-```
-
-These snippets are intentionally plain starting points.
-
-## Accessibility
-
-Always respect reduced motion:
-
-```css
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-```
-
-Do not use animation as the only way to communicate state. Preserve focus states, labels, text, icons, and ARIA behavior as appropriate.
-
-Avoid motion that flashes, shakes repeatedly, moves large backgrounds aggressively, or blocks interaction longer than necessary.
-
-## Review Mode
-
-When asked to review existing animation, prioritize actionable findings over compliments. Inspect the live behavior when possible, not only the source code.
-
-Report in this order:
-
-- Findings: bugs, jank, accessibility issues, timing problems, unclear cause/effect, layout shifts, overlap, or state confusion.
-- Risk: what the issue does to usability, performance, accessibility, or product feel.
-- Recommendation: the smallest change that would improve the motion.
-- Verification: how to confirm the fix, such as viewport checks, reduced-motion checks, screenshot comparison, interaction testing, or build commands.
-
-Use severity when helpful:
-
-| Severity | Meaning |
-| --- | --- |
-| P0 | Breaks interaction, causes severe accessibility risk, or makes content unusable. |
-| P1 | Noticeable usability, performance, or layout regression. |
-| P2 | Quality issue that makes motion feel rough, confusing, or inconsistent. |
-| P3 | Polish suggestion with low user impact. |
-
-If no issues are found, say that clearly and list any unverified areas, such as mobile, reduced motion, or low-end device performance.
-
-## Verification
-
-Before claiming the animation work is done:
-
-- Run the app and interact with the animated states.
-- Check desktop and mobile viewports when layout could change.
-- Check the first frame, peak motion frame, and final resting frame.
-- Confirm reduced-motion behavior exists.
-- Confirm text and controls do not overlap during animation.
-- Confirm animations do not resize fixed UI unexpectedly.
-- For canvas, WebGL, or Three.js, use a screenshot or pixel check to prove the scene renders.
-- Run the relevant lint, typecheck, test, or build command when available.
-
-When possible, inspect the work at normal speed and with slower playback or repeated interaction. Many animation problems only appear during the transition, not in the final frame.
-
-## Common Mistakes
-
-- Adding motion everywhere instead of coordinating one main moment.
-- Choosing animation because a screen feels plain, without defining what it explains.
-- Using long feedback animations that make the UI feel slow.
-- Animating expensive layout properties without measuring.
-- Forgetting reduced-motion users.
-- Hiding loading, error, or disabled states behind decorative animation.
+- Character identity, bone structure, costume, or drift → `character-design`
+- Scene space, light, environment continuity, or scene drift → `scene-design`
+- Final model-specific prompt packet → `prompt-framework`
+- Shot-by-shot reference study → `shot-study`
+- Sound design or music timing → `sound-design-to-prompt` / `score-editing-to-prompt`
+- Larger local project routing or creative team workflow → `animation-studio`

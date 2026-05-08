@@ -1,15 +1,15 @@
-# Review Rubric
+# Animation Video Review Rubric
 
-Use this reference when reviewing existing UI animation or motion implementation.
+Use this reference when reviewing generated animation videos, animatics, storyboards, or AI-video prompt results.
 
 ## Review Output
 
 Lead with findings. For each issue, include:
 
 - Severity: P0, P1, P2, or P3.
-- Finding: what is wrong.
-- Risk: why it matters.
-- Recommendation: the smallest useful fix.
+- Finding: what is wrong on screen.
+- Risk: why it hurts the video.
+- Recommendation: the smallest useful repair.
 - Verification: how to confirm the fix.
 
 If there are no findings, say so and list unverified areas.
@@ -18,79 +18,66 @@ If there are no findings, say so and list unverified areas.
 
 | Severity | Meaning |
 | --- | --- |
-| P0 | Breaks interaction, causes severe accessibility risk, or makes content unusable. |
-| P1 | Noticeable usability, performance, layout, or accessibility regression. |
-| P2 | Quality issue that makes motion feel rough, confusing, or inconsistent. |
-| P3 | Polish suggestion with low user impact. |
+| P0 | The shot is unusable: wrong subject, no readable action, severe identity drift, broken continuity, or unsafe/unwanted content. |
+| P1 | Major story, staging, timing, or continuity failure that blocks delivery. |
+| P2 | Noticeable quality issue: rough timing, weak performance, flicker, morphing, unclear camera, weak ending state. |
+| P3 | Polish suggestion with low story risk. |
 
 ## What To Inspect
 
-Purpose:
+Story clarity:
 
-- Does the animation explain a state change?
-- Does it provide useful feedback?
-- Does it direct attention to the right place?
-- Is it decorative without improving the experience?
+- Can a viewer explain what changed without reading the prompt?
+- Is the first frame readable?
+- Does the final frame land a new state, reaction, or question?
+
+Staging:
+
+- Is there one clear main action?
+- Does silhouette, contrast, camera distance, and light support readability?
+- Are props and obstacles positioned so cause and effect can be seen?
 
 Timing:
 
-- Does feedback happen immediately?
-- Do entrances feel intentional but not slow?
-- Are exits faster than entrances when appropriate?
-- Do repeated animations become tiring?
-
-Hierarchy:
-
-- Does the main subject move first?
-- Are secondary elements quieter?
-- Does motion compete with reading?
-- Is the final resting frame clear?
-
-Continuity:
-
-- Can the user track objects across state changes?
-- Are filtering, sorting, navigation, or modal transitions spatially understandable?
-- Do elements teleport, flicker, or pop unexpectedly?
-
-Accessibility:
-
-- Is `prefers-reduced-motion` handled?
-- Does meaning survive when motion is reduced?
-- Are flashing, shaking, zooming, or large parallax effects avoided or justified?
-- Are focus states and keyboard flows preserved?
+- Is there enough setup before action?
+- Does impact have a clear contact or transformation frame?
+- Does the reaction or settle happen long enough to read?
+- Are cuts or beat changes too fast for the information density?
 
 Performance:
 
-- Are `transform` and `opacity` preferred?
-- Are layout properties animated without verification?
-- Does the animation jank during interaction?
-- Are canvas/WebGL/Three.js scenes nonblank and responsive?
+- Does posture, gaze, breath, or hand action reveal intention?
+- Does the face support the body instead of replacing the body acting?
+- Are secondary motions helping weight and emotion?
 
-Responsive behavior:
+Continuity:
 
-- Does motion still fit mobile screens?
-- Do text and controls overlap during transitions?
-- Do tap targets move unexpectedly?
-- Does the first frame make sense on small viewports?
+- Does character identity remain stable?
+- Do scene layout, light source, weather, and screen direction track?
+- Do prop ownership, damage, residue, and body state carry across shots?
 
-## Common Review Findings
+Production artifacts:
 
-Use these as patterns, not canned responses:
+- Flicker, melting, morphing, warped hands, smeared faces, texture popping.
+- Camera hiding the key action.
+- Unwanted text, logos, subtitles, app screens, UI overlays, or watermarks.
+- Shot starts blank or ends without an inheritable state.
 
-- The animation gives visual feedback only after async work completes, so the click feels ignored.
-- The modal panel and backdrop animate with unrelated timing, so the entrance feels disconnected.
-- Reduced-motion mode removes movement but also removes the only success indication.
-- The list reorder fades items out and in, making it hard to track what changed.
-- The animation moves text while it is being read, reducing legibility.
-- A large transform on mobile causes controls to overlap during the peak frame.
-- The WebGL scene starts blank while assets load, leaving no meaningful first frame.
+## Common Findings
+
+- The clip looks like a still image with camera drift; add timed subject/environment change.
+- The main action happens before the viewer understands the setup; add a readable first frame.
+- The face morphs during camera movement; lock bone/face/hair anchors and simplify motion.
+- The scene resets between shots; carry dust, broken prop, door state, light direction, and body position.
+- The camera is energetic but not informative; choose static, push, track, or reveal based on the beat.
+- The sound cue is missing from the rhythm; add silence, impact, tail, or ambient bed timing.
 
 ## Verification Checklist
 
-- Interact with the animated state at normal speed.
-- Repeat the interaction several times.
-- Check first frame, peak motion frame, and resting frame.
-- Check mobile and desktop viewports.
-- Check reduced-motion mode.
-- Check keyboard and focus behavior where relevant.
-- Run build, lint, typecheck, or tests when available.
+- Watch at normal speed.
+- Pause first frame, peak action, impact frame, and final frame.
+- Compare final frame to the next shot's first frame.
+- Check identity anchors against character reference.
+- Check scene anchors against scene reference.
+- Check for unwanted text or UI artifacts.
+- Confirm the repair prompt names a specific visible replacement, not just "make it better".

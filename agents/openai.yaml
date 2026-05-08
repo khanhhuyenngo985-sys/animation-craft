@@ -1,4 +1,4 @@
 interface:
   display_name: "Animation Craft"
-  short_description: "Craft visual storytelling, shorts, and UI motion"
-  default_prompt: "Use $animation-craft to plan or refine this animation."
+  short_description: "Plan, prompt, and review animation videos"
+  default_prompt: "Use $animation-craft to plan or refine this animation video."

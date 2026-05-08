@@ -1,107 +1,83 @@
-# Implementation Notes
+# AI Video Production Notes
 
-Use this reference when choosing animation technology or implementing motion details.
+Use this reference when turning animation craft into model-ready video work, image-to-video prompts, repair notes, or delivery checks.
 
-## Tool Selection
+## Model Handoff
 
-CSS transitions:
+Write video prompts as timed visual events:
 
-- Best for hover, focus, pressed states, opacity, color, transform, and simple component state.
-- Low overhead and easy to maintain.
-- Use custom properties for shared durations and easing.
+- First frame: subject, place, scale, posture, camera distance, light source.
+- Motion path: where the subject/camera starts, where it moves, and how quickly.
+- Physical cause: what pushes, pulls, interrupts, attracts, blocks, or transforms the subject.
+- Reaction: body, prop, environment, light, sound, or camera response.
+- Ending state: what must be visible in the final frame and inherited by the next shot.
 
-CSS keyframes:
+Avoid writing a still image with style words. A video model needs visible change.
 
-- Best for simple entrance, loop, shimmer, pulse, and decorative sequences.
-- Keep loops subtle and avoid long-running layout or paint-heavy animation.
+## Prompt Timing
 
-Web Animations API:
+Useful timing patterns:
 
-- Best for imperative control without a dependency.
-- Useful when animation starts from measured runtime values.
-- Good for canceling, reversing, or coordinating individual elements.
+| Duration | Pattern |
+| --- | --- |
+| 5s | 0-1s setup, 1-3s action, 3-5s reaction/settle |
+| 8s | 0-2s setup, 2-5s escalation, 5-8s turn/settle |
+| 10s | 0-2s setup, 2-6s main motion, 6-8s impact, 8-10s reaction |
+| 15s | 0-3s setup, 3-7s attempt, 7-11s complication/turn, 11-15s consequence |
 
-Framer Motion:
+Do not force every shot to use every beat. Use only the structure needed for readability.
 
-- Best in React projects that already use it or need shared layout transitions.
-- Good for route transitions, layout changes, presence, and gestures.
-- Avoid adding it for a single hover state.
+## Camera Notes
 
-GSAP:
+Camera motion should explain the shot:
 
-- Best for timeline-heavy choreography, SVG sequences, scroll-linked scenes, and complex coordination.
-- Useful when animation design has many beats.
-- Keep product UI usable while timelines run.
+- Static camera: lets performance, composition, or transformation read clearly.
+- Slow push-in: pressure, realization, intimacy, reveal.
+- Pull-back: consequence, loneliness, scale, aftermath.
+- Tracking: pursuit, travel, chase, inspection, procession.
+- Pan/tilt: reveal relationship, follow gaze, disclose hidden object.
+- Handheld drift: tension, fragility, subjective instability.
 
-Canvas and WebGL:
+Name camera speed and relationship to subject. Avoid vague phrases like "dynamic camera" without a path.
 
-- Best for particles, simulations, games, data visuals, and full-bleed interactive scenes.
-- Verify the first frame, resize behavior, device pixel ratio, and nonblank rendering.
-- Keep DOM controls and readable text stable where possible.
+## Continuity Checks
 
-Three.js:
+Before generating a multi-shot sequence, lock:
 
-- Best for true 3D scenes, cameras, lighting, spatial motion, and interactive objects.
-- Verify camera framing across desktop and mobile.
-- Check that assets load, canvas pixels are nonblank, and controls remain responsive.
+- Character identity: silhouette, face/hair, costume, prop, posture habit.
+- Scene identity: fixed architecture, light source, weather, ground/surface marks.
+- Prop state: ownership, location, damage, glow, liquid, dust, cloth, opening/closing state.
+- Screen direction: who faces left/right, who enters/exits, where the camera axis sits.
+- Body state: fatigue, wounds, wetness, dust, deformation, emotional residue.
+- Ending inheritance: what the next shot must show in the first two seconds.
 
-## Performance
+## Verification
 
-Prefer:
+Review the generated clip at least twice:
 
-- `transform`
-- `opacity`
-- composited layers when appropriate
-- lightweight shadows
-- measured animation scopes
+- Normal speed for audience readability.
+- Paused on first frame, peak action, impact, and final frame.
 
-Avoid unless verified:
+Check:
 
-- animating `top`, `left`, `width`, `height`, `margin`, or `padding`
-- animating large blur filters
-- animating heavy shadows over large surfaces
-- forcing layout inside animation frames
-- starting many independent animations at once
+- The shot has actual motion, not a drifting still.
+- The main action is readable without the prompt.
+- Character and scene identity did not drift.
+- Camera motion does not hide the key action.
+- Light direction, weather, and prop state remain consistent.
+- The final frame can connect to the next shot.
+- No unwanted text, subtitles, logos, UI screens, or watermarks appeared.
 
-Use `will-change` only for elements that are about to animate. Too much layer promotion can hurt memory and performance.
+## Repair Language
 
-## Responsive Motion
+Repair prompts should name the failure and the replacement behavior:
 
-Desktop and mobile may need different motion scale:
-
-- Reduce travel distance on small screens.
-- Keep important controls visible during transitions.
-- Avoid parallax that makes mobile reading harder.
-- Verify tap targets do not move away from the user during interaction.
-- Check landscape and portrait if the scene is spatial.
-
-## Reduced Motion
-
-Reduced-motion mode should keep the state change understandable:
-
-```css
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-  }
-}
+```text
+Problem: the character face morphs during the turn.
+Repair: keep the same oval face, high crown, black tied hair, and left cheek mole throughout; only the gaze moves from the door to the falling lantern.
 ```
 
-For important state changes, replace movement with instant state, opacity, color, icon, text, or layout change.
-
-## Verification Techniques
-
-Use the strongest available check for the risk:
-
-- Manual interaction for feel, timing, and cause/effect.
-- Browser devtools for layout shift, paint, and frame timing.
-- Playwright screenshot for first/resting frame and layout stability.
-- Pixel checks for canvas, WebGL, and Three.js nonblank rendering.
-- Reduced-motion emulation for accessibility.
-- Mobile viewport checks for overlap and tap target movement.
-- Build, lint, typecheck, and test commands when available.
+```text
+Problem: the shot feels like a still image.
+Repair: add visible 0-8s progression: sleeve lifts in wind, lantern swings left to right, dust rises from floor cracks, camera slowly pushes from medium shot to close-up.
+```

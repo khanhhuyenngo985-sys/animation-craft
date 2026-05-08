@@ -2,17 +2,18 @@
 
 [English](README.md) | [中文](README.zh-CN.md)
 
-面向智能体的动画技能，用来创建、优化和评审动画短片、分镜、animatic、UI 动效和互动场景。
+Animation Craft 是面向动画视频制作的智能体技能：动画短片、分镜、animatic、AI 视频镜头、角色表演、镜头运动、连续性、剪辑节奏、声音节拍和图生视频提示词。
 
-Animation Craft 帮助智能体先判断“为什么要动”，这个动作服务哪个故事或交互节拍，再决定动效强度、实现技术和验证方式。目标不是堆转场，而是让动画更清楚、更顺滑、更有表达。
+它不是前端/UI 动效技能。除非用户明确要求界面动画，否则不要把它用于网页、组件、CSS、React 或微交互。
 
 | 方向 | 能帮你做什么 |
 | --- | --- |
-| 动画短片 | 故事节拍、镜头表、分镜结构、animatic、角色动作 |
-| 视觉叙事 | 无对白表演、可读场景约束、道具驱动的因果 |
-| 动效设计 | 微交互、状态过渡、加载状态、滚动效果、页面入场 |
-| 技术实现 | CSS transitions、Web Animations API、Framer Motion、GSAP、Canvas、WebGL、Three.js |
-| 质量评审 | 卡顿、节奏、可访问性、布局偏移、减少动态效果、视觉层级 |
+| 动画视频 | premise、节拍表、镜头表、分镜、animatic 时间 |
+| AI 视频提示词 | Seedance、即梦、可灵、海螺、图生视频的分秒镜头块 |
+| 角色表演 | 姿态、眼神、呼吸、预备动作、行动、反应、落定 |
+| 场景运动 | 镜头逻辑、环境反应、轴线、光线/天气连续性 |
+| 剪辑与声音 | 镜头节奏、剪辑点、静默、撞击声、声音时间点 |
+| 审片与修复 | 故事可读性、调度、节奏、身份漂移、闪烁、变形、连续性 |
 
 ## 安装
 
@@ -31,60 +32,50 @@ git clone https://github.com/khanhhuyenngo985-sys/animation-craft ~/.agents/skil
 
 ## 使用
 
-当你希望智能体创建、优化或评审动效时，可以这样调用：
+当你希望智能体制作、优化或评审动画视频时调用：
 
 ```text
-Use $animation-craft to make this dashboard feel more responsive without adding decorative motion.
+Use $animation-craft to turn this idea into a 15-second AI-video shot with beginning, motion, ending state, camera, and sound cue.
 ```
 
 ```text
-Use $animation-craft to review the modal and loading animations for accessibility, timing, and layout issues.
+Use $animation-craft to plan a 30-second animated short with beat sheet, shot list, and animatic timing.
 ```
 
 ```text
-Use $animation-craft to outline a 30-second animated short with clear story beats, shot timing, and character action.
+Use $animation-craft to review this generated clip for story clarity, timing, continuity, and character drift.
 ```
 
 ## 这个技能会教什么
 
-核心技能文件提供一套紧凑工作流：
-
-- 先判断动画的任务：反馈、连续性、引导或表达。
-- 用 premise、节拍、镜头规划、staging 和 animatic 时间来组织动画短片。
-- 用姿态、道具、场景、停顿和声音提示来承载视觉优先的故事节拍。
-- 使用时间、间距、预备动作、跟随动作、弧线和重量感等动画基础。
-- 使用层级、连续性、方向、克制和即时反馈等产品动效规律。
-- 重要动效开始前，写一个很短的 motion brief。
-- 根据交互选择节奏、缓动、层次和技术方案。
-- 尊重 `prefers-reduced-motion`。
-- 验证第一帧、运动峰值帧、静止帧、移动端表现，以及 Canvas/WebGL 是否正常渲染。
-- 用严重度、风险、建议和验证步骤来评审动画。
+- 从“可见变化”开始，而不是从装饰性运动开始。
+- 用第一帧、预备、行动、撞击、反应、落定构建镜头。
+- 用姿态、道具、场景约束、光线、静默和声音提示让故事可读。
+- 把情绪翻译成身体表演和时间节奏。
+- 在多镜头中保护角色、场景、道具、光线和轴线连续性。
+- 把 AI 视频提示词写成分秒发生的视觉事件，而不是静态图片描述。
+- 审片顺序固定为：故事、调度、节奏、表演、连续性、制作瑕疵。
 
 ## 知识库
 
-`references/` 文件夹提供按需加载的扩展知识，不会把主技能文件撑得太重：
-
 | 文件 | 什么时候读 |
 | --- | --- |
-| `references/animation-fundamentals.md` | 学习动画基础：时间、间距、预备动作、弧线、跟随动作 |
-| `references/animated-shorts.md` | 规划动画短片、分镜、镜头表、animatic 和角色动作 |
-| `references/visual-storytelling.md` | 让视觉优先的故事节拍更可读，不依赖台词或私有风格配方 |
-| `references/motion-principles.md` | 规划动效语言、层级、staging、节奏和状态叙事 |
-| `references/motion-rules.md` | 使用产品动效里的实用规律：反馈、层级、连续性和克制 |
-| `references/implementation-notes.md` | 选择 CSS、WAAPI、Framer Motion、GSAP、Canvas、WebGL 或 Three.js |
-| `references/review-rubric.md` | 评审已有动画，并写出可执行的问题、风险和建议 |
+| `references/animated-shorts.md` | 规划动画短片、分镜、镜头表、animatic、角色动作 |
+| `references/visual-storytelling.md` | 用视觉节拍讲清楚故事，不依赖台词 |
+| `references/animation-fundamentals.md` | 时间、间距、预备动作、弧线、跟随动作、重量 |
+| `references/motion-principles.md` | 视频运动语言、调度、节奏、镜头/主体层级 |
+| `references/motion-rules.md` | 可读镜头运动和连续性的实用规则 |
+| `references/implementation-notes.md` | AI 视频制作、提示词时间轴、模型交付和验证 |
+| `references/review-rubric.md` | 评审生成视频并输出修复意见 |
 
 ## 示例
 
-`examples/` 文件夹包含一些常见动效任务的通用小片段：
-
 | 文件 | 用途 |
 | --- | --- |
-| `examples/button-feedback.css` | hover、focus 和 pressed 的即时反馈 |
-| `examples/modal-transition.css` | backdrop 和 panel 的入场/退出节奏 |
-| `examples/list-reorder.css` | 保持对象连续性的列表变化 |
-| `examples/reduced-motion.css` | reduced-motion 降级模式 |
-| `examples/storyboard-template.md` | 动画短片的简单镜头规划模板 |
+| `examples/storyboard-template.md` | 分镜面板规划 |
+| `examples/ai-video-shot-template.md` | 分秒 AI 视频镜头提示词 |
+| `examples/continuity-ledger.md` | 多镜头连续性记录 |
+| `examples/animation-review-template.md` | 生成片段审片与修复计划 |
 
 ## 仓库结构
 
@@ -98,10 +89,9 @@ animation-craft/
 |   `-- openai.yaml
 |-- examples/
 |   |-- README.md
-|   |-- button-feedback.css
-|   |-- list-reorder.css
-|   |-- modal-transition.css
-|   |-- reduced-motion.css
+|   |-- ai-video-shot-template.md
+|   |-- animation-review-template.md
+|   |-- continuity-ledger.md
 |   `-- storyboard-template.md
 `-- references/
     |-- animated-shorts.md

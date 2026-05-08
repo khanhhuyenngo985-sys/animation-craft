@@ -1,17 +1,16 @@
 # Examples
 
-Small, generic animation examples for public use. These examples are intentionally framework-light and can be adapted to existing design systems.
+Small templates for animation video planning, AI-video prompting, continuity tracking, and review.
 
 ## Files
 
 | File | Use For |
 | --- | --- |
-| `button-feedback.css` | Immediate hover, focus, and pressed feedback |
-| `modal-transition.css` | Backdrop and panel entrance/exit timing |
-| `list-reorder.css` | Trackable list changes with object constancy |
-| `reduced-motion.css` | Reduced-motion fallback patterns |
 | `storyboard-template.md` | Shot planning template for animated shorts |
+| `ai-video-shot-template.md` | Timed Seedance/即梦/可灵 style shot prompt |
+| `continuity-ledger.md` | Multi-shot identity, prop, scene, and state tracking |
+| `animation-review-template.md` | Generated clip review and repair plan |
 
 ## How To Use
 
-Start with the smallest example that matches the work, then adjust names, colors, spacing, durations, shots, or beats to fit the project. Keep the animation's job clear: story, feedback, continuity, guidance, or expression.
+Start with the template closest to the job. Keep the visible change clear: first frame, motion, impact or turn, final state, and what the next shot must inherit.

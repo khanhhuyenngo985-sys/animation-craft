@@ -1,134 +1,105 @@
-# Motion Rules Of Thumb
+# Shot Motion Rules Of Thumb
 
-Use this reference when the task needs practical UI animation judgment.
+Use this reference when a shot, storyboard, animatic, or AI-video prompt needs practical motion judgment.
 
-## Rule 1: Feedback Comes First
+## Rule 1: One Action Leads
 
-Every direct user action should acknowledge input quickly.
+Every shot needs one dominant action or change.
 
-- Clicks, taps, drags, saves, deletes, and toggles should respond before or during async work.
-- Loading that appears only after a delay can make the product feel broken.
-- Use visual feedback even when the final result takes time.
+- Let the main subject move or change first.
+- Keep secondary motion quieter unless it supports the beat.
+- Do not make camera, character, weather, particles, cloth, and light all compete at full intensity.
 
-Good motion starts by making the interface feel attentive.
+If the viewer cannot say what happened, there is too much motion or the wrong thing is moving.
 
-## Rule 2: One Moment Leads
+## Rule 2: First Frame Must Read
 
-Each screen or interaction should have a clear motion leader.
+The first frame should answer:
 
-- Let one element carry the main change.
-- Keep nearby elements quieter.
-- Use stagger to reveal hierarchy, not to decorate.
-- Avoid simultaneous animations with equal contrast.
+- Who or what are we watching?
+- Where are they?
+- What pressure or expectation is already present?
+- Which direction should the eye travel?
 
-If the user cannot tell what changed, there is too much motion or the wrong thing is moving.
+A beautiful unclear first frame wastes the shot.
 
-## Rule 3: Stillness Is Part Of Motion
+## Rule 3: Stillness Is A Beat
 
-Stillness makes motion legible.
+Stillness makes action legible.
 
-- Keep reading areas calm.
-- Keep controls stable while the user is deciding.
-- Use ambient motion only where it does not compete with task flow.
-- Let motion finish before asking the user to interpret a new state.
+- Hold before important decisions.
+- Pause after surprises, impacts, or emotional turns.
+- Let a final image breathe before cutting.
+- Use silence or reduced sound to sharpen attention.
 
-A calm interface can make a small animation feel more intentional.
+Do not fill every second with new motion.
 
-## Rule 4: Direction Should Mean Something
+## Rule 4: Motion Direction Carries Meaning
 
-Motion direction should support the mental model.
+Screen direction and camera direction should support the beat.
 
-- Down often suggests reveal, expansion, or incoming detail.
-- Up can suggest dismissal, elevation, or return.
-- Left/right often maps to previous/next, before/after, or navigation.
-- Toward the trigger suggests connection.
-- Away from the trigger suggests dismissal or completion.
+- Moving toward camera can create threat, intimacy, or arrival.
+- Moving away can create loss, escape, scale, or aftermath.
+- Left/right direction should stay consistent across connected shots.
+- Vertical motion can imply fall, rise, pressure, release, power, or vulnerability.
 
-Do not reverse direction casually between related states.
+Do not reverse direction between shots unless the story beat calls attention to the reversal.
 
-## Rule 5: Preserve Object Identity
+## Rule 5: Preserve Identity While State Changes
 
-When users care about an item, help them track it.
+Continuity is not cleanliness. It is identity plus consequence.
 
-- Move the object instead of replacing it when location changes.
-- Keep selected items visually connected across navigation or filtering.
-- Animate list reorder when order matters.
-- Use fade-only transitions for content where identity is not important.
+- Preserve face/hair, silhouette, costume category, signature prop, and scene anchors.
+- Change body state, residue, damage, emotion, prop state, weather, or light when the story requires it.
+- Name the next inherited state for multi-shot sequences.
 
-Object constancy reduces cognitive load.
+## Rule 6: Camera Serves Readability
 
-## Rule 6: Match Motion Scale To Importance
+Camera movement is not a substitute for action.
 
-The bigger the motion, the more important it feels.
+- Use static framing when performance or transformation needs clarity.
+- Push in for realization or pressure.
+- Pull back for consequence or scale.
+- Track when movement through space matters.
+- Reveal only when the hidden information is the point.
 
-- Buttons and inputs usually need small movement.
-- Modals, drawers, and pages can use medium movement.
-- Hero scenes and games can use larger movement.
-- Destructive, error, or system-critical states should avoid playful excess.
+If the camera hides the key contact, impact, or expression, simplify it.
 
-If a small action gets a large animation, the interface can feel theatrical instead of useful.
+## Rule 7: Impact Needs Contact And Aftermath
 
-## Rule 7: Exit Faster Than Enter
+Strong action needs a readable chain:
 
-Users usually need more time to understand what appears than what disappears.
+1. Anticipation.
+2. Contact or transformation.
+3. Reaction.
+4. Residue or new state.
 
-- Entrances can introduce information.
-- Exits should get out of the way.
-- Modal, drawer, and tooltip exits often feel better at about 70-80% of the enter duration.
+Without aftermath, the action feels weightless.
 
-Do not let dismissal animations slow the user down.
+## Rule 8: Loops Need Variation Or Purpose
 
-## Rule 8: Motion Should Not Hide State
+Loops work for breathing, waiting, ambient life, ritual, machinery, or comic repetition.
 
-Animation must not be the only state carrier.
+- Add small variation if the loop should feel alive.
+- Keep the loop quiet when story information matters elsewhere.
+- Break the loop when the character decides or the scene turns.
 
-- Pair error motion with text, color, icon, or focus.
-- Pair success motion with persistent confirmation when needed.
-- Preserve keyboard and screen reader behavior.
-- Reduced-motion users should still understand what happened.
+## Rule 9: Environment Should React
 
-Motion can emphasize state, but it should not replace state.
+Animated video feels grounded when the world answers:
 
-## Rule 9: Loops Need A Reason
+- Dust rises after foot contact.
+- Cloth follows body motion.
+- Light flickers when flame moves.
+- Water ripples from impact.
+- Crowd, leaves, smoke, or shadow responds with delayed timing.
 
-Looping animation is expensive in attention.
+Use environment reaction to prove force, scale, and consequence.
 
-- Use loops for loading, waiting, living scenes, or clearly ambient contexts.
-- Keep loops slow, subtle, or spatially separated from reading.
-- Pause or reduce loops when they are no longer useful.
-- Avoid multiple unrelated loops in the same viewport.
+## Rule 10: Verify Peak Frames
 
-If the user is trying to read or decide, the loop should be quiet.
+Many video failures appear only mid-shot.
 
-## Rule 10: Verify The Peak Frame
-
-Many animation bugs appear only mid-transition.
-
-- Check first frame, peak motion frame, and final frame.
-- Look for text overlap, clipped surfaces, moving tap targets, and unexpected layout shifts.
-- Test reduced motion and mobile viewports.
-- For canvas and WebGL, confirm the scene is nonblank and correctly framed.
-
-The final screenshot is not enough.
-
-## Rule 11: Use Motion To Explain Relationship
-
-Motion can show how things belong together.
-
-- A menu should emerge from or near its trigger.
-- A selected card should preserve continuity when opening details.
-- A toast should appear from a consistent region.
-- A filter change should make changed results trackable.
-
-When spatial relationships are unclear, motion can act like a visual sentence.
-
-## Rule 12: Keep The Interface Playable
-
-Animation should not block interaction unless the blocked period is intentional and brief.
-
-- Avoid locking the whole UI for decorative sequences.
-- Allow repeated actions to cancel, reverse, or finish cleanly.
-- Prevent animation queues from stacking up after rapid clicks.
-- Make loading and disabled states explicit.
-
-The user should feel in control of the interface.
+- Check first frame, peak action, impact frame, and final frame.
+- Look for face morphing, hand warping, prop loss, camera occlusion, scene reset, or flicker.
+- The final frame must be a usable bridge to the next shot.
